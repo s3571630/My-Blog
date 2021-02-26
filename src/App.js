@@ -1,10 +1,17 @@
-import './App.css';
+import './css/App.scss';
+import {Container, Row, Col } from 'react-bootstrap'
 
 function App() {
   return (
-    <div className="App">
-      <p>Hello World</p>
-    </div>
+    <Container>
+      <Row>
+        <Col xs={6}>test</Col>
+        <Col xs={6}>test</Col>
+      </Row>
+      <Row>
+        <Col xs={12}>test</Col>
+      </Row>
+    </Container>
   );
 }
 

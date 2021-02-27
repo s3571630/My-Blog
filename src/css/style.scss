@@ -1,3 +1,4 @@
+
 // Pages
 .not-found{
     height: 100vh;
@@ -22,9 +23,9 @@
         .logo{
             margin-bottom: 0.7em;
             text-align: center;
-            color: #222;
+            color: #333;
             font-size: 1.5em;
-            font-weight: 700;
+            font-weight: 500;
         }
         .form-input{
             background-color: #fff;
@@ -78,6 +79,45 @@
             text-decoration: none;
             color: #fff;
         }
+    }
+}
+
+.self-intro{
+    .img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        .filter{
+            display: none;
+            background-color:rgba(0,0,0,.3);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            a{
+                color: rgba(255,255,255,.85);
+                .fas{
+                    overflow: hidden;
+                    position: absolute;
+                    z-index: 5;
+                    font-size: 2em;
+                    left: 43%;
+                    top: 40%;
+                }
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+
+    .txt{
+        font-size: 1.5em;
     }
 }
 

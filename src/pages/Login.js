@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Login(props){
+export default (props)=>{
     return (
         <div className="login">
             <form>

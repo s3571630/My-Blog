@@ -1,3 +1,4 @@
+// Pages
 .not-found{
     height: 100vh;
     display: flex;
@@ -8,6 +9,62 @@
         opacity: .6;
     }
 }
+.login{
+    height: 100vh;
+    width: 100vw;
+    background:linear-gradient(45deg,rgb(224, 122, 207),rgb(140, 187, 150));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form{
+        font-size: 1.7em;
+        padding: 3em 2em;
+        .logo{
+            margin-bottom: 0.7em;
+            text-align: center;
+            color: #222;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+        .form-input{
+            background-color: #fff;
+            .fas{
+                color: #444;
+                margin: 0 0.5em;
+            }
+            input::-webkit-input-placeholder {
+                font-size: 0.9em;
+            }
+            input::-moz-input-placeholder {
+                font-size: 0.9em;
+            }
+            input::-ms-input-placeholder {
+                font-size: 0.9em;
+            }
+            input{
+                border: none;
+                border-left: 2px solid #ccc;
+                outline: transparent;
+                &:focus{
+                    background-color: #eef;
+                }
+            }
+            margin-bottom: 0.5em;
+            border: 1px solid #ccc;
+        }
+        button{
+            margin-top: 0.5em;
+            font-size: 1em;
+            color: #eee;
+            opacity: .8.7;
+            width: 100%;
+            background-color: #f66;
+            border: none;
+        }
+    }
+}
+
+// componenet
 .header{
     background-color: #000;
     color: #fff;
@@ -20,6 +77,14 @@
         &:hover{
             text-decoration: none;
             color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    .login{
+        form{
+            font-size: 1.1em;
         }
     }
 }

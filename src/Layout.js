@@ -8,7 +8,6 @@ class Layout extends React.Component{
                 <Header/>
                 {this.props.children}
             </div>
-
         )
     }
 }

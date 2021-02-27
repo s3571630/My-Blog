@@ -1,0 +1,25 @@
+.not-found{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+        font-size: 2.5em;
+        opacity: .6;
+    }
+}
+.header{
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    font-size: 1.2em;
+    justify-content: space-between;
+    padding: 0.7em 2em;
+    a{
+        color: #fff;
+        &:hover{
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}

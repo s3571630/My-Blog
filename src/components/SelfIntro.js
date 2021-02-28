@@ -1,30 +1,6 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
 class SelfIntro extends React.Component{
-    state ={
-        filtercontnets:'filter',
-        filterworks:'filter d-none',
-    };
-    handleMouseEnter = ()=>{
-        this.setState({
-            filtercontnets: 'filter d-block',
-        })
-     }
-     handleMouseLeave = ()=>{
-        this.setState({
-            filtercontnets: 'filter',
-        })
-     }
-    handleWorksMouseEnter = ()=>{
-        this.setState({
-            filterworks:'filter',
-        })
-     }
-     handleWorksMouseLeave = ()=>{
-        this.setState({
-            filterworks:'filter d-none',
-        })
-     }
     render(){
         return (
             <div className="container self-intro">
@@ -32,11 +8,9 @@ class SelfIntro extends React.Component{
                     <div className="col-12 d-flex justify-content-center pt-4 pb-5">
                         <div
                             className="img"
-                            onMouseOver={this.handleMouseEnter}
-                            onMouseLeave={this.handleMouseLeave}
                         >
-                            <img className="img-fluid w-100"  src="/images/pro.jpg" />
-                            <div className={this.state.filtercontnets}>
+                            <img className="img-fluid w-100" src="/images/pro.jpg" />
+                            <div className="filter">
                                 <Link to = "/"><i class="fas fa-pen" title="修改圖片"></i></Link>
                             </div>
                         </div>
@@ -53,11 +27,9 @@ class SelfIntro extends React.Component{
                                 style={{
                                     background: `linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('/images/work1.png') no-repeat 0% 20%/ cover`
                                 }}
-                                onMouseEnter={this.handleWorksMouseEnter}
-                                onMouseLeave={this.handleWorksMouseLeave}
                             >
                                 <h2>Zony官網</h2>
-                                <div className={this.state.filterworks}>
+                                <div className="filter">
                                     <Link to = "/"> <i class='fas fa-pen' title="修改圖片"></i></Link>
                                     <Link to = "/"><i class='fas fa-arrow-right' title="作品詳細"></i></Link>
                                 </div>

@@ -90,6 +90,9 @@
             border-radius: 50%;
             overflow: hidden;
             position: relative;
+            &:hover .filter{
+                display: block;
+            }
             .filter{
                 display: none;
                 background-color:rgba(0,0,0,.3);
@@ -130,6 +133,7 @@
             border: 1px solid #000;
             position: relative;
             .filter{
+                display: none;
                 width: 100%;
                 height: 100%;
                 background-color: rgba(255,255,255,.6);
@@ -141,6 +145,9 @@
                     font-size: 1.8em;
                     margin: 1.8em;
                 }
+            }
+            &:hover .filter{
+                display: block;
             }
         }
     }

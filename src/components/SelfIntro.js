@@ -1,7 +1,19 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
+import axios from 'axios';
 class SelfIntro extends React.Component{
+    state = {
+        workscontents:[]
+    }
+    componentDidMount(){
+        axios.get('http://localhost:3004/workscontents').then(res =>{
+            this.setState({
+                workscontents: res.data,
+            })
+        })
+    }
     render(){
+        // background: `linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('/images/work1.png') no-repeat 0% 20%/ cover`
         return (
             <div className="container self-intro">
                 <div className="row article">
@@ -22,18 +34,24 @@ class SelfIntro extends React.Component{
                 <div className="row porfortlio">
                     <div className="col-8 mx-auto">
                         <div className="row">
-                            <div
-                                className="col-5 d-flex justify-content-around text-center mx-auto porfortlio-card"
-                                style={{
-                                    background: `linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('/images/work1.png') no-repeat 0% 20%/ cover`
-                                }}
-                            >
-                                <h2>Zony官網</h2>
-                                <div className="filter">
-                                    <Link to = "/"> <i class='fas fa-pen' title="修改圖片"></i></Link>
-                                    <Link to = "/"><i class='fas fa-arrow-right' title="作品詳細"></i></Link>
-                                </div>
-                            </div>
+                            {
+                                this.state.workscontents.map(works=>{
+                                    return(
+                                        <div
+                                            className="col-5 d-flex justify-content-around text-center mx-auto porfortlio-card"
+                                            style={{
+                                                background: "linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('" + works.coverimg + "') no-repeat 0% 20%/ cover"
+                                            }}
+                                        >
+                                            <h2>{works.name}</h2>
+                                            <div className="filter">
+                                                <Link to = "/"> <i class='fas fa-pen' title="修改圖片"></i></Link>
+                                                <Link to = "/"><i class='fas fa-arrow-right' title="作品詳細"></i></Link>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>
